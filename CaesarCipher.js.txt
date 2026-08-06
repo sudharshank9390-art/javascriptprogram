@@ -1,0 +1,14 @@
+const text = "HELLO";
+let result = "";
+
+for (let ch of text) {
+    let code = ch.charCodeAt(0);
+
+    if (code >= 65 && code <= 90) {
+        result += String.fromCharCode(((code - 65 + 3) % 26) + 65);
+    } else {
+        result += ch;
+    }
+}
+
+console.log("Encrypted =", result);
